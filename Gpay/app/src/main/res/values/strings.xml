@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Gpay</string>
+    <string name="terms_and_condition">By continuing you agree to the Combined to the Combined Google Pay Terms. The
+    Privacy Policy describes how your data is handled. Google Pay will periodically send your contacts and location to Google servers.
+    People with your number can contact you across Google services and see your public information like name and photo. The phone number you ave provided can be used
+    on different Google services./n
+    Google services collects your phone number, device, payment and location, to set up payment methods
+    and control risk. This and other transaction information may be shared with your payment provider, network and 3rd parties.</string>
 </resources>
