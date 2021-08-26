@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "300901950901",
+    "project_id": "pay-1ec09",
+    "storage_bucket": "pay-1ec09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300901950901:android:115bc3ce473f0b4d3025fc",
+        "android_client_info": {
+          "package_name": "com.masai.sainath.gpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300901950901-j3n496qkutj9i8n047ce8b3jq47f680c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkE0vPDfoSMJEELk3ugxA8IT93glMw9jM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300901950901-j3n496qkutj9i8n047ce8b3jq47f680c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300901950901:android:dcd5e638181f72bc3025fc",
+        "android_client_info": {
+          "package_name": "com.masai.sainath.gpayy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300901950901-j3n496qkutj9i8n047ce8b3jq47f680c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkE0vPDfoSMJEELk3ugxA8IT93glMw9jM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300901950901-j3n496qkutj9i8n047ce8b3jq47f680c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
