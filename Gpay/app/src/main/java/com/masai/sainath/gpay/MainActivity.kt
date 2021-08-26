@@ -2,6 +2,8 @@ package com.masai.sainath.gpay
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -22,10 +24,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var uselist:ArrayList<usermodel>
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+    }
+
+    override fun onStart() {
+        super.onStart()
         getdata()
         getdata1()
         getdata2()
@@ -35,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         uselist= arrayListOf<usermodel>()
         recycler3=findViewById(R.id.recycle3)
         recycler3.layoutManager=GridLayoutManager(this,4)
-        recycler3.setHasFixedSize(true)
+        recycler3.setHasFixedSize(false)
         dref2=FirebaseDatabase.getInstance().getReference("data3")
         dref2.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -67,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                     for (usersnapshot in snapshot.children){
                         val user1=usersnapshot.getValue(Newmodel::class.java)
                         userlist.add(user1!!)
+
                     }
                     recycler2.adapter=NewAdapter(this@MainActivity,userlist)
                 }
@@ -93,8 +103,13 @@ class MainActivity : AppCompatActivity() {
                         val user=usersnapshot.getValue(Model::class.java)
                         datalist.add(user!!)
                     }
+
+
                     recycler1.adapter=MyAdapter(this@MainActivity,datalist)
+
                 }
+
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -102,7 +117,37 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        }
+    private fun getdata5(){
+        dref=FirebaseDatabase.getInstance().getReference("data")
+        dref.addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists()){
+                    for (usersnapshot in snapshot.children){
+                        val adder=usersnapshot.getValue(Model::class.java)
+                        datalist.add(adder!!)
+                    }
+
+
+
+
+                }
+
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
     }
 
-
 }
+
+
+
+
+
