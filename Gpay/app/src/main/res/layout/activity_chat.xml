@@ -27,33 +27,33 @@
                 />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/ProfileImage"
-                android:layout_margin="10dp"
+                android:id="@+id/ProfileImagee"
                 android:layout_width="46dp"
                 android:layout_height="46dp"
-                android:src="@drawable/man"
-                app:civ_border_width="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_toEndOf="@id/arrow"
-                android:layout_marginTop="15dp"
-                app:civ_border_color="@color/teal_700"/>
+                android:src="@drawable/man"
+                app:civ_border_color="@color/teal_700"
+                app:civ_border_width="2dp" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/userNamee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/ProfileImage"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/ProfileImagee"
                 android:text="User Name"
-                android:textSize="18sp"
                 android:textColor="@color/black"
-                />
+                android:textSize="18sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/username"
-                android:layout_toEndOf="@id/ProfileImage"
+                android:layout_below="@id/userNamee"
+                android:layout_toEndOf="@id/ProfileImagee"
                 android:layout_marginStart="10dp"
                 android:text="Mobile Number"
                 android:textSize="14sp"

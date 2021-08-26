@@ -1,4 +1,4 @@
-package com.masai.sainath.gpay
+package com.masai.sainath.gpay.model_class
 
 import android.text.Editable
 

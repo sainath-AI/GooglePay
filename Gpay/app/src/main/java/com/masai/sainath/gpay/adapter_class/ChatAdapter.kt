@@ -1,8 +1,11 @@
-package com.masai.sainath.gpay
+package com.masai.sainath.gpay.adapter_class
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.masai.sainath.gpay.R
+import com.masai.sainath.gpay.RecieverViewHolder
+import com.masai.sainath.gpay.model_class.ReceiverModel
 
 class ChatAdapter( private  val receiverModelList: List<ReceiverModel>) :
     RecyclerView.Adapter<RecieverViewHolder>() {
