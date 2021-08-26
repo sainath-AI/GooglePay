@@ -2,23 +2,15 @@ package com.masai.sainath.gpay.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
 import android.view.View
-import android.widget.PopupMenu
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
 import com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks
 import com.masai.sainath.gpay.R
-import com.masai.sainath.gpay.databinding.ActivityGoogleAuthoBinding
-import kotlinx.android.synthetic.main.activity_enter_number_login.view.*
 import kotlinx.android.synthetic.main.activity_google_autho.*
 import java.util.concurrent.TimeUnit
 

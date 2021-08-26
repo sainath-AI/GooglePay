@@ -123,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
+            android:id="@+id/resendOtp"
             android:text="ResendOTP"
             android:textAllCaps="false"
             android:background="@color/transparent"

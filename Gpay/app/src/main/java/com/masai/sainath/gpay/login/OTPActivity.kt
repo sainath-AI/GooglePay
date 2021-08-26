@@ -1,5 +1,6 @@
 package com.masai.sainath.gpay.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -7,14 +8,112 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.FirebaseException
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
+import com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks
+import com.masai.sainath.gpay.MainActivity
 import com.masai.sainath.gpay.R
 import kotlinx.android.synthetic.main.activity_otpactivity.*
+import java.util.concurrent.TimeUnit
 
 class OTPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpactivity)
 
+        otpToMove()
+        var getotpbackend = intent.getStringExtra("backendotp")
+        verifyOTP.setOnClickListener(View.OnClickListener {
+            if (!otpET1.getText().toString().trim { it <= ' ' }
+                    .isEmpty() && !otpET2.getText().toString().trim { it <= ' ' }
+                    .isEmpty() && !otpET3.getText().toString().trim { it <= ' ' }
+                    .isEmpty() && !otpET4.getText().toString().trim { it <= ' ' }
+                    .isEmpty()) {
+                val entercodeotp: String = otpET1.getText().toString() +
+                        otpET2.getText().toString() +
+                        otpET3.getText().toString() +
+                        otpET4.getText().toString() +
+                        otpET5.getText().toString() +
+                        otpET6.getText().toString()
+                if (getotpbackend != null) {
+//                    progressBarverifyotp.setVisibility(View.VISIBLE)
+//                    verifybuttonclick.setVisibility(View.INVISIBLE)
+                    val phoneAuthCredential = PhoneAuthProvider.getCredential(
+                        getotpbackend!!, entercodeotp
+                    )
+                    FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
+                        .addOnCompleteListener { task ->
+//                            progressBarverifyotp.setVisibility(View.GONE)
+//                            verifybuttonclick.setVisibility(View.VISIBLE)
+                            if (task.isSuccessful) {
+                                val intent = Intent(applicationContext, MainActivity::class.java)
+                                intent.flags =
+                                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Enter the correct Otp",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                } else {
+                    Toast.makeText(
+                        applicationContext,
+                        "Please check internet connection",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+//                    Toast.makeText(verifyenterotptwo.this,"otp verify",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(
+                    applicationContext,
+                    "please enter all number",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
+
+
+        resendOtp.setOnClickListener(View.OnClickListener {
+            PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                "+91" + intent.getStringExtra("mobile"),
+                60,
+                TimeUnit.SECONDS,
+                this,
+                object : OnVerificationStateChangedCallbacks() {
+                    override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {}
+                    override fun onVerificationFailed(e: FirebaseException) {
+                        Toast.makeText(applicationContext, e.message, Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onCodeSent(
+                        newbackendotp: String,
+                        forceResendingToken: ForceResendingToken
+                    ) {
+                        getotpbackend = newbackendotp
+                        Toast.makeText(
+                            applicationContext,
+                            "Otp sended Succussfully",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            )
+        })
+
+
+
+    }
+
+    private fun otpToMove() {
         otpET1.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (otpET1.text.toString().length == 1) {
@@ -152,6 +251,5 @@ class OTPActivity : AppCompatActivity() {
 
 //            Toast.makeText(applicationContext,otpString,Toast.LENGTH_SHORT).show()
         }
-
     }
 }
