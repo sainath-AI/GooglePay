@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_gravity="center"
     android:layout_height="match_parent"
-    tools:context=".RequestAcitvity">
+    tools:context=".PayActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ProfileImage"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/man"
+            app:civ_border_color="@color/teal_700"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requesting from UserName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_19sdp" />
+
+        <TextView
+            android:id="@+id/phNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 897834382"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="Rs."
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+
+            <EditText
+                android:id="@+id/etRupees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:hint="0"
+                android:textColor="#585858"
+                android:textSize="@dimen/_40sdp"
+
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etnote"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/shape_item"
+            android:gravity="center"
+            android:hint="Add a note"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4285F4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/tick"
+        android:layout_margin="@dimen/_20sdp"
+        />
+
+
+
+
+</RelativeLayout>
