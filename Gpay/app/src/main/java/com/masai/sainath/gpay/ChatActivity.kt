@@ -34,6 +34,8 @@ class ChatActivity : AppCompatActivity() {
 
     private fun buildChatList() {
 
+        val receiverModel = ReceiverModel(editTextMessage.text.toString()!!)
+
 
     }
 

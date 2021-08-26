@@ -2,12 +2,9 @@ package com.masai.sainath.gpay
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
 
 class MainActivity : AppCompatActivity() {
 

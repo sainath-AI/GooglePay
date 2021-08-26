@@ -5,7 +5,7 @@ plugins {
     id 'kotlin-android-extensions'
 
 
-   
+
 
 }
 
@@ -88,8 +88,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
-
-}
 
 
     // Import the BoM for the Firebase platform
