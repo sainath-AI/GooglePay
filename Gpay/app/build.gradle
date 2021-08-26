@@ -9,7 +9,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.masai.sainath.gpay"
+        applicationId "com.masai.sainath.gpayy"
         minSdk 22
         targetSdk 30
         versionCode 1
