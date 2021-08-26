@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/drawable/recivershape.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/drawable/sendershape.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/drawable/shape_item.xml" value="0.24375" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/activity_pay.xml" value="0.2" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/activity_request_acitvity.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/activity_scanner.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/reciver_layout_item.xml" value="0.1" />
+        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/PROJECTS/GooglePay/Gpay/app/src/main/res/layout/sender_layout_item.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+
         <entry key="..\:/Users/dudi/AndroidStudioProjects/GooglePay/Gpay/app/src/main/res/drawable/circle.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/dudi/AndroidStudioProjects/GooglePay/Gpay/app/src/main/res/drawable/ic_rectangle_16.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/dudi/AndroidStudioProjects/GooglePay/Gpay/app/src/main/res/layout/activity_main.xml" value="0.18" />
