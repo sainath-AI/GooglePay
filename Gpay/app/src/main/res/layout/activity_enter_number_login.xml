@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="19dp"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".login.EnterNumber_LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/loginMenu"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/login_menu" />
+
+        <Button
+            android:id="@+id/country"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_toLeftOf="@+id/loginMenu"
+            android:background="@drawable/bg_login_slector"
+            android:drawableStart="@drawable/ic_indian_flag"
+            android:drawableEnd="@drawable/ic_down"
+            android:padding="0dp"
+            android:text="IN"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/etlanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_toLeftOf="@+id/country"
+            android:background="@drawable/bg_login_slector"
+            android:drawableStart="@drawable/ic_world"
+            android:drawableEnd="@drawable/ic_down"
+            android:padding="0dp"
+            android:paddingStart="8dp"
+            android:text="    English(United States)"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/gpay_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Welcome to Google Pay"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Enter your phone number"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/linearEnterNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_enter_number"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="+91"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            android:hint="00000 00000"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="23sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnNextTo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/button_bg_blue"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
