@@ -1,18 +1,20 @@
 package com.masai.sainath.gpay
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.masai.sainath.gpay.adapter_class.ChatAdapter
 import com.masai.sainath.gpay.model_class.ReceiverModel
 import kotlinx.android.synthetic.main.activity_chat.*
-import java.util.ArrayList
+import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
-    private  val receiverModel: List<ReceiverModel> = ArrayList<ReceiverModel>()
+    private var receiverModelList: ArrayList<ReceiverModel> = ArrayList()
     private var chatAdapter: ChatAdapter? = null
 
 
@@ -24,34 +26,52 @@ class ChatActivity : AppCompatActivity() {
         Glide.with(ProfileImagee).load(intent.getStringExtra("image")).into(ProfileImagee)
 
         btnpay.setOnClickListener {
-            val intent = Intent(this,PayActivity::class.java)
+            val intent = Intent(this, PayActivity::class.java)
             startActivity(intent)
         }
         btnrequest.setOnClickListener {
-            val intent = Intent(this,RequestAcitvity::class.java)
+            val intent = Intent(this, RequestAcitvity::class.java)
             startActivity(intent)
         }
-
-
-
-        setrecyclerAdapter()
         buildChatList()
+        setrecyclerAdapter()
+        textChange()
+    }
+
+    private fun textChange() {
+        editTextMessage.doAfterTextChanged {
+            if (editTextMessage.text.toString().trim().length > 0) {
+                sendChat.visibility = View.VISIBLE
+                editTextMessage.width
+                btnpay.visibility = View.GONE
+                btnrequest.visibility = View.GONE
+            } else {
+                sendChat.visibility = View.GONE
+                btnpay.visibility = View.VISIBLE
+                btnrequest.visibility = View.VISIBLE
+            }
+        }
     }
 
     private fun buildChatList() {
 
-        val receiverModel = ReceiverModel(editTextMessage.text.toString()!!)
+        sendChat.setOnClickListener {
+            val receiverModel = ReceiverModel(editTextMessage.text.toString()!!)
+            receiverModelList.add(receiverModel)
+            editTextMessage.text = null
+            chatAdapter?.updateData(receiverModelList)
+        }
 
 
     }
 
     private fun setrecyclerAdapter() {
-        chatAdapter= ChatAdapter(receiverModel)
-        val layoutManager=LinearLayoutManager(this)
-        recyclerview.layoutManager=layoutManager
-        recyclerview.adapter=chatAdapter
+        chatAdapter = ChatAdapter(receiverModelList)
+        val layoutManager = LinearLayoutManager(this)
+        recyclerview.layoutManager = layoutManager
+        recyclerview.adapter = chatAdapter
 
-           }
+    }
 
 
 }
