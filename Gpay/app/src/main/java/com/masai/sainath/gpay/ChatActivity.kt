@@ -63,6 +63,7 @@ class ChatActivity : AppCompatActivity() {
         }
 
 
+
     }
 
     private fun setrecyclerAdapter() {
