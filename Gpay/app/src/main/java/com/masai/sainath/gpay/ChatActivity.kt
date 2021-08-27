@@ -35,6 +35,7 @@ class ChatActivity : AppCompatActivity() {
     private fun buildChatList() {
 
 
+
     }
 
     private fun setrecyclerAdapter() {
