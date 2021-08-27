@@ -107,6 +107,7 @@ class ChatActivity : AppCompatActivity() {
 
         })
 
+
     }
 
     private fun setRecyclerAdapter() {
