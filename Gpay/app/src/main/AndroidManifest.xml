@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.masai.sainath.gpay">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -12,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gpay">
         <activity
+
             android:name=".RequestAcitvity"
             android:exported="true" />
         <activity
@@ -21,10 +23,27 @@
             android:name=".ChatActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+
+            android:name=".login.OTPActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".login.GoogleAutho"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".Scanner"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".login.EnterNumber_LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SplashScreen"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +51,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>

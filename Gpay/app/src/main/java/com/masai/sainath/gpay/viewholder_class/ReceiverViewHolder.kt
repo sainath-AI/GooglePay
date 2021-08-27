@@ -2,6 +2,7 @@ package com.masai.sainath.gpay
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.masai.sainath.gpay.model_class.ReceiverModel
 import kotlinx.android.synthetic.main.sender_layout_item.view.*
 
 
