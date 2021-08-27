@@ -5,17 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masai.sainath.gpay.OnClickListener
 import com.masai.sainath.gpay.R
-import com.masai.sainath.gpay.model_class.ReceiverModel
 import com.masai.sainath.gpay.model_class.usermodel
-import kotlinx.android.synthetic.main.sender_layout_item.view.*
+import kotlin.collections.ArrayList
 
-class userAdapter(private val context: Context,private val uselist:ArrayList<usermodel>):RecyclerView.Adapter<userAdapter.userholder>() {
+class userAdapter(private val context: Context, private val uselist: ArrayList<usermodel>):RecyclerView.Adapter<userAdapter.userholder>() {
 
 
 
