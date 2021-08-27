@@ -1,222 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="10dp"
-        android:id="@+id/Rel1">
+
+        <RelativeLayout
+            android:id="@+id/Rel1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tvScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+
+                android:layout_marginBottom="15dp"
+                android:drawableStart="@drawable/ic_baseline_qr_code_scanner_24"
+                android:text="  Scan any QR"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivProfile"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/about" />
+
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/tvScan"
+            android:id="@+id/tvPeoples"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-
-            android:layout_marginBottom="15dp"
-            android:drawableStart="@drawable/ic_baseline_qr_code_scanner_24"
-            android:text="  Scan any QR"
+            android:layout_below="@+id/Rel1"
+            android:layout_margin="20dp"
+            android:text="Peoples"
             android:textColor="@color/black"
-            android:textSize="15sp" />
-    <ImageView
-        android:id="@+id/ivProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_account_circle_24"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="12dp"/>
+            android:textSize="20sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/about"
-            android:scaleType="centerCrop"
-            android:layout_below="@+id/ivProfile"
-            android:layout_centerInParent="true"
-            />
-
-    </RelativeLayout>
-    <TextView
-        android:id="@+id/tvPeoples"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Peoples"
-        android:layout_below="@+id/Rel1"
-        android:layout_margin="20dp"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/recycle1"
             android:layout_below="@+id/tvPeoples">
 
         </androidx.recyclerview.widget.RecyclerView>
-
 
 
         <TextView
             android:id="@+id/tvBills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Business and Bills"
             android:layout_below="@+id/recycle1"
-            android:textSize="17sp"
+            android:layout_margin="15dp"
+            android:text="Business and Bills"
             android:textColor="@color/black"
-            android:layout_margin="15dp"/>
+            android:textSize="17sp" />
+
         <HorizontalScrollView
+            android:id="@+id/Hscroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Hscroll"
             android:layout_below="@+id/tvBills">
+
             <LinearLayout
+                android:id="@+id/linearview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/linearview"
                 android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_rectangle_16"
-                android:drawableStart="@drawable/ic_baseline_attach_money_24"
-                android:gravity="center"
-                android:text="Bills"
-                android:textSize="15dp"
-                android:layout_marginStart="20dp"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_rectangle_16"
-                android:drawableStart="@drawable/ic_baseline_mobile_friendly_24"
-                android:gravity="center"
-                android:text="Recharge"
-                android:textSize="15dp"
-                android:layout_marginStart="20dp"
-                android:textColor="@color/black"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/ic_rectangle_16"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Bills"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/ic_rectangle_16"
+                    android:drawableStart="@drawable/ic_baseline_mobile_friendly_24"
+                    android:gravity="center"
+                    android:padding="@dimen/_3sdp"
+                    android:text="Recharge"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:background="@drawable/ic_rectangle_16"
                     android:drawableStart="@drawable/ic_baseline_sports_baseball_24"
                     android:gravity="center"
+                    android:padding="3dp"
                     android:text="Sports"
-                    android:textSize="15dp"
-                    android:layout_marginStart="20dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:background="@drawable/ic_rectangle_16"
                     android:drawableStart="@drawable/ic_baseline_monetization_on_24"
                     android:gravity="center"
+                    android:padding="3dp"
                     android:text="Donate"
-                    android:textSize="15dp"
-                    android:layout_marginStart="20dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:background="@drawable/ic_rectangle_16"
                     android:drawableStart="@drawable/ic_baseline_euro_24"
                     android:gravity="center"
+                    android:padding="3dp"
                     android:text="Gold"
-                    android:textSize="15dp"
-                    android:layout_marginStart="20dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
             </LinearLayout>
         </HorizontalScrollView>
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/recycle2"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/Hscroll"/>
+            android:layout_below="@+id/Hscroll"
+            android:layout_marginTop="20dp" />
+
         <TextView
             android:id="@+id/tvpromotion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Promotions"
             android:layout_below="@+id/recycle2"
-            android:textSize="17sp"
+            android:layout_margin="15dp"
+            android:text="Promotions"
             android:textColor="@color/black"
-            android:layout_margin="15dp"/>
+            android:textSize="17sp" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/recycle3"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/tvpromotion"/>
+            android:layout_below="@+id/tvpromotion"
+            android:layout_marginTop="20dp" />
+
         <TextView
             android:id="@+id/regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_payments_24"
-            android:text="   Regular Payments"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:layout_marginTop="50dp"
+            android:layout_below="@+id/recycle3"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="15dp"
-            android:layout_below="@+id/recycle3"/>
+            android:drawableStart="@drawable/ic_baseline_payments_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="   Regular Payments"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/tvsetup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set up bills,recharge and other payment"
+            android:layout_below="@+id/regular"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="50dp"
-            android:textSize="12sp"
+            android:text="Set up bills,recharge and other payment"
             android:textColor="@color/black"
-            android:layout_below="@+id/regular"/>
+            android:textSize="12sp" />
+
         <TextView
             android:id="@+id/Trasation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_more_time_24"
-            android:text="   Show transaction history"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
-           android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/tvsetup"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="50dp"
-            android:layout_below="@+id/tvsetup"/>
+            android:layout_marginEnd="15dp"
+            android:drawableStart="@drawable/ic_baseline_more_time_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="   Show transaction history"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/Balance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_receipt_24"
-            android:text="   View account balance"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_below="@+id/Trasation"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginTop="50dp"
-            android:layout_below="@+id/Trasation"/>
+            android:layout_marginEnd="15dp"
+            android:drawableStart="@drawable/ic_baseline_receipt_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="   View account balance"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/below"
+            android:layout_below="@+id/Balance"
             android:layout_marginTop="40dp"
             android:scaleType="centerCrop"
-            android:layout_below="@+id/Balance"/>
-
-
-
-
+            android:src="@drawable/below" />
 
     </RelativeLayout>
 </ScrollView>

@@ -7,7 +7,7 @@ import com.masai.sainath.gpay.R
 import com.masai.sainath.gpay.RecieverViewHolder
 import com.masai.sainath.gpay.model_class.ReceiverModel
 
-class ChatAdapter( private  val receiverModelList: List<ReceiverModel>) :
+class ChatAdapter(var receiverModelList: List<ReceiverModel>) :
     RecyclerView.Adapter<RecieverViewHolder>() {
 
 
@@ -24,6 +24,11 @@ class ChatAdapter( private  val receiverModelList: List<ReceiverModel>) :
 
     override fun getItemCount(): Int {
        return receiverModelList.size
+    }
+
+    fun updateData(receiverModelList: List<ReceiverModel>){
+        this.receiverModelList=receiverModelList
+        notifyDataSetChanged()
     }
 
 
