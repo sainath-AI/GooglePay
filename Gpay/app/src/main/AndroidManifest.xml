@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gpay">
         <activity
+            android:name=".BankAccount"
+            android:exported="true" />
+        <activity
             android:name=".Profile"
             android:exported="true" />
         <activity
@@ -30,10 +33,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".login.GoogleAutho"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Scanner"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".login.EnterNumber_LoginActivity"
             android:exported="true"
