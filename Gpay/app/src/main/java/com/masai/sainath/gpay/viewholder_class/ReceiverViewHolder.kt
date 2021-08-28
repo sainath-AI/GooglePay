@@ -10,7 +10,7 @@ class RecieverViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun setdata(receiverModel: ReceiverModel){
             itemView.apply {
-                txtmessageSend.text=receiverModel.message
+                txtmessageSend.text=receiverModel.chat
             }
 
     }

@@ -3,7 +3,6 @@ package com.masai.sainath.gpay
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -129,31 +128,6 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         })
 
         }
-    private fun getdata5(){
-        dref=FirebaseDatabase.getInstance().getReference("data")
-        dref.addValueEventListener(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-                    for (usersnapshot in snapshot.children){
-                        val adder=usersnapshot.getValue(Model::class.java)
-                        datalist.add(adder!!)
-                    }
-
-
-
-
-                }
-
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
-
-    }
 
     override fun onClick(position: Int, model: Model) {
         val intent = Intent(applicationContext,ChatActivity::class.java)
