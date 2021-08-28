@@ -39,7 +39,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="saving account"
+        android:text="@string/saving_account"
         android:layout_below="@+id/indianBank"
         android:layout_toEndOf="@+id/imgBank"
         android:layout_marginStart="@dimen/_15sdp"
@@ -62,7 +62,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mr.SAINATH REDDY \n +91 7619374117"
+        android:text="@string/mr_sainath_reddy_n_91_7619374117"
         android:layout_below="@+id/info"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_5sdp"

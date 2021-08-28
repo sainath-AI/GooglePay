@@ -35,6 +35,12 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         setContentView(R.layout.activity_main)
 
 
+        ivProfile.setOnClickListener {
+            val intent = Intent(this,Profile::class.java)
+            startActivity(intent)
+        }
+
+
         tvScan.setOnClickListener {
             val intent= Intent(applicationContext,Scanner::class.java)
             startActivity(intent)
