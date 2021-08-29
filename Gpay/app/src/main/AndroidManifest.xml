@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.masai.sainath.gpay" >
+    package="com.masai.sainath.gpay">
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -12,6 +11,9 @@
         android:roundIcon="@drawable/logogpay"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gpay" >
+        <activity
+            android:name=".TrasactionHistory.TransactionActivity"
+            android:exported="true" />
         <activity
             android:name=".Settings"
             android:exported="true" />
@@ -36,6 +38,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".login.GoogleAutho"
+            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".Scanner"
@@ -55,7 +58,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            tools:ignore="DuplicateActivity" />
+            android:exported="true" />
     </application>
 
 </manifest>

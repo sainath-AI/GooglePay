@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlayout"
+    android:gravity="center">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:id="@+id/civtran"/>
+    <TextView
+        android:id="@+id/tvtran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dhsfkjhsd"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/civtran"/>
+    <TextView
+        android:id="@+id/tvtran1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dhsfkjhsd"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvtran"
+        android:layout_toRightOf="@+id/civtran"/>
+    <TextView
+        android:id="@+id/tvtran2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dhsfkjhsd"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
