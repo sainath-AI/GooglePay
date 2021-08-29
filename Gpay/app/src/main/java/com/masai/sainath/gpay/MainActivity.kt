@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import com.masai.sainath.gpay.TrasactionHistory.TransactionActivity
 import com.masai.sainath.gpay.adapter_class.MyAdapter
 import com.masai.sainath.gpay.adapter_class.NewAdapter
 import com.masai.sainath.gpay.adapter_class.userAdapter
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity(),OnClickListener {
             startActivity(intent)
         }
 
+        Trasation.setOnClickListener {
+            val intent = Intent(this,TransactionActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
@@ -61,9 +66,10 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         recycler3=findViewById(R.id.recycle3)
         recycler3.layoutManager=GridLayoutManager(this,4)
         recycler3.setHasFixedSize(false)
-        dref2=FirebaseDatabase.getInstance().getReference("data3")
+        dref2=FirebaseDatabase.getInstance().getReference("main_database/Promotion")
         dref2.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                uselist.clear()
                 if(snapshot.exists()){
                     for (usersnapshot in snapshot.children){
                         val user2=usersnapshot.getValue(usermodel::class.java)
@@ -88,6 +94,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         dref1=FirebaseDatabase.getInstance().getReference("main_database/Business_and_bills")
         dref1.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                userlist.clear()
                 if(snapshot.exists()){
                     for (usersnapshot in snapshot.children){
                         val user1=usersnapshot.getValue(Newmodel::class.java)
@@ -114,6 +121,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         dref=FirebaseDatabase.getInstance().getReference("main_database/Peoples")
         dref.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                datalist.clear()
                 if(snapshot.exists()){
                     for (usersnapshot in snapshot.children){
                         val user=usersnapshot.getValue(Model::class.java)

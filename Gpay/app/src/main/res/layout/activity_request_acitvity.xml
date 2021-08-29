@@ -38,7 +38,7 @@
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/ProfileImage"
+            android:id="@+id/ProfileImagee"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_margin="10dp"
@@ -57,15 +57,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paying "
+                android:text="Requesting "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_10sdp" />
 
             <TextView
-                android:id="@+id/userName"
+                android:id="@+id/rohit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UserName"
+                android:text="rohit"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_10sdp" />
 

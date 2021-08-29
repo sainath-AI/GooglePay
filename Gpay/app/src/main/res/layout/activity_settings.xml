@@ -311,30 +311,7 @@
         android:textSize="@dimen/_12sdp" />
 
 
-    <ImageView
-        android:id="@+id/help"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/settings"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_13sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/information" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settings"
-        android:layout_marginStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_13sdp"
-        android:layout_toRightOf="@+id/help"
-        android:text="Help / feedback"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp"
-
-
-        />
 
 
 </RelativeLayout>

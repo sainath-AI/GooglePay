@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.masai.sainath.gpay.NewAdapter
 import com.masai.sainath.gpay.R
 
 class TransationAdapter(private val context: Context,private val list:ArrayList<TransationModel>,val listener:clicklisten):RecyclerView.Adapter<TransationViewHolder>() {

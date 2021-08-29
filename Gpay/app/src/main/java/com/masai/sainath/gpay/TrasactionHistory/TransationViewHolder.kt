@@ -9,9 +9,9 @@ class TransationViewHolder(val view: View,val listener:clicklisten):RecyclerView
 
     fun setdata(list:TransationModel){
         view.apply {
-            Glide.with(context).load(list.Image).into(civtran)
-            tvtran.text=list.name
-            tvtran1.text=list.date
+//            Glide.with(context).load(list.Image).into(civtran)
+            tvtran.text=list.username
+            tvtran1.text=list.currentdate
             tvtran2.text=list.amount
             rlayout.setOnClickListener {
                 listener.onClicked(adapterPosition,list)

@@ -1,16 +1,19 @@
 package com.masai.sainath.gpay.TrasactionHistory
 
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
 import com.masai.sainath.gpay.R
 import kotlinx.android.synthetic.main.activity_transaction.*
 
 class TransactionActivity : AppCompatActivity(),clicklisten {
 
-    private lateinit var tranlist:ArrayList<TransationModel>
+    private  var tranlist:ArrayList<TransationModel> = ArrayList()
+    private lateinit var databaseReferenc:DatabaseReference
+
+    private lateinit var transationAdapter:TransationAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +21,35 @@ class TransactionActivity : AppCompatActivity(),clicklisten {
         setContentView(R.layout.activity_transaction)
         tranlist= arrayListOf<TransationModel>()
         setTransation()
+        buildlist()
     }
+
+    private fun buildlist() {
+
+        databaseReferenc = FirebaseDatabase.getInstance().getReference("transaction")
+        databaseReferenc.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists()){
+                    for (usersnapshot in snapshot.children){
+                        val user2=usersnapshot.getValue(TransationModel::class.java)
+                        tranlist.add(user2!!)
+                    }
+                    historyrecycle.adapter= TransationAdapter(this@TransactionActivity,tranlist,this@TransactionActivity)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
+    }
+
     fun setTransation(){
-        val transationAdapter=TransationAdapter(this,tranlist,this)
+//        val transationAdapter=TransationAdapter(this,tranlist,this)
         val layoutManager=LinearLayoutManager(this)
-        historyrecycle.adapter=transationAdapter
+//        historyrecycle.adapter=transationAdapter
         historyrecycle.layoutManager=layoutManager
     }
 

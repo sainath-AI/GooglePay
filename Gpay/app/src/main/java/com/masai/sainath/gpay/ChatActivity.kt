@@ -30,13 +30,16 @@ class ChatActivity : AppCompatActivity() {
 
         userNamee.text = intent.getStringExtra("name")
         Glide.with(ProfileImagee).load(intent.getStringExtra("image")).into(ProfileImagee)
+        var username:String= intent.getStringExtra("name")
 
         btnpay.setOnClickListener {
             val intent = Intent(this, PayActivity::class.java)
+            intent.putExtra("username",username)
             startActivity(intent)
         }
         btnrequest.setOnClickListener {
             val intent = Intent(this, RequestAcitvity::class.java)
+            intent.putExtra("username",username)
             startActivity(intent)
         }
 
