@@ -3,17 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:background="@color/transparent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:id="@+id/Rel1"
+            android:background="@color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="10dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
 
             <TextView
                 android:id="@+id/tvScan"
@@ -40,7 +43,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_below="@+id/ivProfile"
                 android:layout_centerInParent="true"
                 android:scaleType="centerCrop"
@@ -53,7 +56,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Rel1"
-            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Peoples"
             android:textColor="@color/black"
             android:textSize="20sp" />

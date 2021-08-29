@@ -90,11 +90,11 @@
 
     <LinearLayout
         android:id="@+id/linear1"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="2dp"
+        android:background="@color/white"
         android:gravity="end">
 
         <LinearLayout
@@ -106,21 +106,21 @@
                 android:id="@+id/btnpay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:background="@drawable/chat_bg_button"
+                android:gravity="center"
                 android:paddingHorizontal="@dimen/_14sdp"
                 android:paddingVertical="7dp"
                 android:text="pay"
                 android:textColor="@color/white" />
 
             <TextView
-                android:gravity="center"
                 android:id="@+id/btnrequest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:background="@drawable/chat_bg_button"
+                android:gravity="center"
                 android:paddingHorizontal="@dimen/_14sdp"
                 android:paddingVertical="7dp"
                 android:text="request"

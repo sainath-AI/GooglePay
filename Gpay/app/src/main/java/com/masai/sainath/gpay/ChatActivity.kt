@@ -13,6 +13,7 @@ import com.masai.sainath.gpay.model_class.ReceiverModel
 import kotlinx.android.synthetic.main.activity_chat.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ChatActivity : AppCompatActivity() {
 
@@ -84,19 +85,24 @@ class ChatActivity : AppCompatActivity() {
     private fun buildChatList() {
 
 
-        receiverModelList.clear()
+//        receiverModelList.clear()
+//        val reverse: ArrayList<ReceiverModel> = ArrayList()
         database1 =
             FirebaseDatabase.getInstance().getReference("chat/${intent.getStringExtra("name")}")
 //            .child("${intent.getStringExtra("name")}")
         database1.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+//                reverse.clear()
                 receiverModelList.clear()
                 if (snapshot.exists()) {
                     for (usersnapshot in snapshot.children) {
                         val chat = usersnapshot.getValue(ReceiverModel::class.java)
+//                        reverse.add(chat!!)
+
                         receiverModelList.add(chat!!)
 //                        chatAdapter?.updateData(receiverModelList)
                     }
+//                   receiverModelList= ArrayList(reverse.reversed())
                     recyclerview.adapter = ChatAdapter(receiverModelList)
                 }
             }

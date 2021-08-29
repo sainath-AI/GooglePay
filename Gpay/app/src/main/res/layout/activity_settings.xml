@@ -10,67 +10,66 @@
     <RelativeLayout
         android:id="@+id/realtive"
         android:layout_width="match_parent"
-        android:background="@drawable/gpay"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/gpay">
+
         <ImageView
             android:id="@+id/arrow"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
             android:layout_margin="@dimen/_15sdp"
-            />
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
         <ImageView
             android:id="@+id/dots"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/more"
-            android:layout_margin="@dimen/_15sdp"
             android:layout_alignParentEnd="true"
-            />
+            android:layout_margin="@dimen/_15sdp"
+            android:src="@drawable/more" />
 
         <TextView
             android:id="@+id/name"
-            android:layout_below="@+id/arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sainath Reddy"
-            android:textSize="@dimen/_20sdp"
-            android:textColor="@color/black"
+            android:layout_below="@+id/arrow"
             android:layout_marginStart="@dimen/_20sdp"
+            android:text="Sainath Reddy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
 
 
             />
+
         <TextView
             android:id="@+id/PNumber"
-            android:layout_below="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+91 7619374117"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_13sdp"
-            android:textColor="@color/black"
+            android:layout_below="@+id/name"
             android:layout_marginStart="@dimen/_20sdp"
-            />
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="+91 7619374117"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
 
         <TextView
             android:id="@+id/Upi"
-            android:layout_below="@+id/PNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sainath_OkHdfc@1826"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_13sdp"
-            android:textColor="@color/black"
+            android:layout_below="@+id/PNumber"
             android:layout_marginStart="@dimen/_20sdp"
-            />
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="sainath_OkHdfc@1826"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ProfileImagee"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_below="@id/dots"
-            android:layout_marginTop="@dimen/_15sdp"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:src="@drawable/user"
             app:civ_border_color="@color/teal_700"
@@ -82,23 +81,20 @@
             android:layout_width="@dimen/_26sdp"
             android:layout_height="@dimen/_26sdp"
             android:layout_below="@id/Upi"
-            android:src="@drawable/trophy"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_40sdp"
-            />
+            android:src="@drawable/trophy" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Upi"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_45sdp"
             android:layout_toEndOf="@id/tropy"
             android:text="Rs.80 reward earned"
             android:textColor="@color/black"
-            android:layout_below="@id/Upi"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_45sdp"
-            />
-
+            android:textSize="@dimen/_14sdp" />
 
 
     </RelativeLayout>
@@ -106,26 +102,26 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/realtive"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardElevation="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_13sdp"
         android:layout_marginEnd="@dimen/_13sdp"
         android:paddingTop="@dimen/_20sdp"
-        android:layout_height="wrap_content">
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_20sdp">
 
         <RelativeLayout
-            android:paddingBottom="@dimen/_10sdp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_10sdp">
 
             <TextView
                 android:id="@+id/settingup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="Set up the payments methods 1/2"
                 android:textColor="@color/black"
-                android:layout_margin="20dp"
                 android:textSize="15sp"
 
                 />
@@ -133,207 +129,209 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/blue"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/_15sdp"
+                android:src="@drawable/blue"
 
                 />
 
-
-            <ImageView
-                android:id="@+id/bank"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
+            <LinearLayout
+                android:id="@+id/BankLinear"
+                android:gravity="center"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_50sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/settingup"
-                android:layout_marginStart="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/bank" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/bankaccount"
+                <ImageView
+                    android:id="@+id/bank"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/bank" />
+
+                <TextView
+                    android:id="@+id/bankaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bank account"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 accounts"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/businessLinear"
+                android:gravity="center"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_50sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/bank"
-                android:text="Bank account"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_50sdp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bankaccount"
-                android:text="2 accounts"
-                android:textSize="12sp"
-                android:layout_marginStart="@dimen/_60sdp"
-                />
-            <ImageView
-                android:id="@+id/business"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:src="@drawable/suitcase"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@id/settingup"
-                android:layout_marginEnd="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                />
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/payBusiness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bank"
-                android:text="Pay Business"
-                android:textSize="15sp"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/black"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_50sdp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/payBusiness"
-                android:text="Debit?credit card"
-                android:layout_alignParentEnd="true"
-                android:textSize="12sp"
-                android:layout_marginEnd="@dimen/_40sdp"
-                />
+                <ImageView
+                    android:id="@+id/business"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/suitcase" />
+
+                <TextView
+                    android:id="@+id/payBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Business"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debit?credit card"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </RelativeLayout>
-        
+
     </androidx.cardview.widget.CardView>
-    
+
     <ImageView
         android:id="@+id/house"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/house"
         android:layout_below="@id/cardview"
-        android:layout_marginTop="@dimen/_40sdp"
         android:layout_marginStart="@dimen/_20sdp"
-        />
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/house" />
+
     <TextView
         android:id="@+id/txtBusiness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Business Page"
-        android:textSize="@dimen/_13sdp"
-        android:layout_toEndOf="@+id/house"
         android:layout_below="@id/cardview"
-        android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_toEndOf="@+id/house"
+        android:text="Business Page"
         android:textColor="@color/black"
-        />
+        android:textSize="@dimen/_13sdp" />
+
     <TextView
         android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Publish and share information about \n your business"
-        android:layout_toEndOf="@+id/house"
         android:layout_below="@id/txtBusiness"
         android:layout_marginStart="@dimen/_10sdp"
-        />
+        android:layout_toEndOf="@+id/house"
+        android:text="Publish and share information about \n your business" />
+
     <TextView
         android:id="@+id/create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create"
-        android:textStyle="bold"
-        android:textSize="@dimen/_15sdp"
-        android:textColor="#4285F4"
-        android:layout_alignParentEnd="true"
         android:layout_below="@id/txtBusiness"
-        android:layout_marginEnd="@dimen/_10sdp"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:text="Create"
+        android:textColor="#4285F4"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/gift"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/gift"
         android:layout_below="@id/house"
-        android:layout_marginTop="@dimen/_50sdp"
         android:layout_marginStart="@dimen/_20sdp"
-        />
+        android:layout_marginTop="@dimen/_50sdp"
+        android:src="@drawable/gift" />
+
     <TextView
         android:id="@+id/txtgift"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invite friends,get rewards"
-        android:textSize="@dimen/_13sdp"
-        android:layout_toEndOf="@+id/house"
         android:layout_below="@id/txt"
-        android:layout_marginTop="35dp"
         android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/house"
+        android:text="Invite friends,get rewards"
         android:textColor="@color/black"
-        />
+        android:textSize="@dimen/_13sdp" />
+
     <TextView
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="share your code dujs889"
-        android:layout_toEndOf="@+id/house"
         android:layout_below="@id/txtgift"
         android:layout_marginStart="@dimen/_10sdp"
-        />
+        android:layout_toEndOf="@+id/house"
+        android:text="share your code dujs889" />
+
     <TextView
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share"
-        android:textStyle="bold"
-        android:textSize="@dimen/_15sdp"
-        android:textColor="#4285F4"
-        android:layout_alignParentEnd="true"
         android:layout_below="@id/create"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/_40sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        />
+        android:text="Share"
+        android:textColor="#4285F4"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/settings"
         android:layout_below="@id/gift"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/settings"
 
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:layout_toEndOf="@+id/settings"
         android:layout_below="@id/txt2"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:textSize="@dimen/_12sdp"
-        android:textColor="@color/black"
         android:layout_marginStart="@dimen/_12sdp"
-        />
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_toEndOf="@+id/settings"
+        android:text="Settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
 
 
     <ImageView
         android:id="@+id/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/information"
-
+        android:layout_below="@+id/settings"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_13sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        />
+        android:src="@drawable/information" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help / feedback"
-        android:textSize="@dimen/_12sdp"
-        android:textColor="@color/black"
-        android:layout_toRightOf="@+id/help"
         android:layout_below="@id/settings"
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_13sdp"
+        android:layout_toRightOf="@+id/help"
+        android:text="Help / feedback"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
 
 
         />

@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
 
     override fun onStart() {
         super.onStart()
+
         getdata()
         getdata1()
         getdata2()
@@ -84,7 +85,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         recycler2=findViewById(R.id.recycle2)
         recycler2.layoutManager=GridLayoutManager(this,4)
         recycler2.setHasFixedSize(true)
-        dref1=FirebaseDatabase.getInstance().getReference("data2")
+        dref1=FirebaseDatabase.getInstance().getReference("main_database/Business_and_bills")
         dref1.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
@@ -110,7 +111,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         recycler1=findViewById(R.id.recycle1)
         recycler1.layoutManager=GridLayoutManager(this,4)
         recycler1.setHasFixedSize(true)
-        dref=FirebaseDatabase.getInstance().getReference("data")
+        dref=FirebaseDatabase.getInstance().getReference("main_database/Peoples")
         dref.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
