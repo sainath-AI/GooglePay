@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrasactionHistory.TransactionActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_arrow"
+        android:drawableEnd="@drawable/ic_baseline_more_vert_24"
+        android:layout_margin="15dp"
+        android:id="@+id/tvback"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction History"
+        android:layout_below="@+id/tvback"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tvhistory"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvhistory"
+        android:layout_margin="10dp"
+        android:id="@+id/historyrecycle"/>
+</RelativeLayout>
