@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:padding="15dp"
+    tools:context=".login.OTPActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">]
+
+        <ImageView
+            android:id="@+id/googleAuthoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_baseline_arrow" />
+
+        <ImageView
+            android:id="@+id/googleAuthoMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/login_menu" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Verify your number"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the OTP sent to +91 "
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8237578373"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/otpET1"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/otpET2"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/otpET3"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/otpET4"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/otpET5"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/otpET6"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Having trouble? "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="ResendOTP"
+            android:textAllCaps="false"
+            android:background="@color/transparent"
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/verifyOTP"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_bg_blue"
+            android:text="continue"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
