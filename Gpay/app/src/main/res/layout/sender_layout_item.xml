@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/white"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_alignParentEnd="true"
+        app:cardCornerRadius="@dimen/_17sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtmessageSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/sendershape"
+            android:paddingHorizontal="@dimen/_28sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="chat with me"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

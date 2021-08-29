@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankAccount">
+
+    <TextView
+        android:id="@+id/txtpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment method details"
+        android:textSize="@dimen/_17sdp"
+        android:layout_margin="@dimen/_15sdp"
+        />
+
+    <ImageView
+        android:id="@+id/imgBank"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/indianbank"
+        android:layout_below="@+id/txtpayment"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+    <TextView
+        android:id="@+id/indianBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indian Bank 64111"
+        android:layout_below="@+id/txtpayment"
+        android:layout_toEndOf="@+id/imgBank"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saving_account"
+        android:layout_below="@+id/indianBank"
+        android:layout_toEndOf="@+id/imgBank"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Information"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/imgBank"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mr_sainath_reddy_n_91_7619374117"
+        android:layout_below="@+id/info"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+</RelativeLayout>

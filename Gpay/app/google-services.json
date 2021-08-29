@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "491523972946",
-    "project_id": "gpay-93230",
-    "storage_bucket": "gpay-93230.appspot.com"
+    "project_number": "1002036007446",
+    "project_id": "pay-464a4",
+    "storage_bucket": "pay-464a4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:491523972946:android:09cd1bf578cb98b00ea48b",
+        "mobilesdk_app_id": "1:1002036007446:android:9b05a5669c11937b599b37",
         "android_client_info": {
           "package_name": "com.masai.sainath.gpay"
         }
       },
       "oauth_client": [
         {
-          "client_id": "491523972946-e0isc0samu9fuhr288d7ehdppktb65dq.apps.googleusercontent.com",
+          "client_id": "1002036007446-70vnl54o5nh5oe9ubl3k9voa9adl49nc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDnqf92bYAFy2-BMLuerPGqUIANTMj9NU4"
+          "current_key": "AIzaSyCzjtHSTT0gUCG8G3F2ROsUtyC81rV-H8U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "491523972946-e0isc0samu9fuhr288d7ehdppktb65dq.apps.googleusercontent.com",
+              "client_id": "1002036007446-70vnl54o5nh5oe9ubl3k9voa9adl49nc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
