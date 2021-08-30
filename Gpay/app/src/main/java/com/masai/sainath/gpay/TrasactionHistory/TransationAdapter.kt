@@ -1,12 +1,11 @@
 package com.masai.sainath.gpay.TrasactionHistory
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.masai.sainath.gpay.R
 
-class TransationAdapter(private val context: Context,private val list:ArrayList<TransationModel>,val listener:clicklisten):RecyclerView.Adapter<TransationViewHolder>() {
+class TransationAdapter(private val list:ArrayList<TransationModel>,val listener:clicklisten):RecyclerView.Adapter<TransationViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransationViewHolder {

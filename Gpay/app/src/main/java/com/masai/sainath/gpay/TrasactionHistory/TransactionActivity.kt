@@ -26,15 +26,19 @@ class TransactionActivity : AppCompatActivity(),clicklisten {
 
     private fun buildlist() {
 
-        databaseReferenc = FirebaseDatabase.getInstance().getReference("transaction")
+        tranlist.clear()
+        var reverseList:ArrayList<TransationModel> = ArrayList()
+        databaseReferenc = FirebaseDatabase.getInstance().getReference("Transactions")
         databaseReferenc.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                reverseList.clear()
                 if(snapshot.exists()){
                     for (usersnapshot in snapshot.children){
                         val user2=usersnapshot.getValue(TransationModel::class.java)
-                        tranlist.add(user2!!)
+                        reverseList.add(user2!!)
                     }
-                    historyrecycle.adapter= TransationAdapter(this@TransactionActivity,tranlist,this@TransactionActivity)
+                    tranlist= ArrayList(reverseList.reversed())
+                    historyrecycle.adapter= TransationAdapter(tranlist,this@TransactionActivity)
                 }
             }
 

@@ -10,49 +10,47 @@ import com.masai.sainath.gpay.model_class.Newmodel
 import kotlinx.android.synthetic.main.activity_pay.*
 import java.text.SimpleDateFormat
 import java.util.*
+import com.google.firebase.database.DatabaseError
+
+import com.google.firebase.database.DataSnapshot
+
+import com.google.firebase.database.ChildEventListener
+
+import com.google.firebase.database.FirebaseDatabase
+import com.masai.sainath.gpay.model_class.Model
+import com.masai.sainath.gpay.model_class.Transact
+
 
 class PayActivity : AppCompatActivity() {
 
     private lateinit var databaseReferenc:DatabaseReference
     private lateinit var databaseTracsact:DatabaseReference
+    private lateinit var databaseTracsactchat:DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
 
 
-        var usernamee:String = intent.getStringExtra("username")
-        userName.text = usernamee
-        Glide.with(ProfileImage).load("https://firebasestorage.googleapis.com/v0/b/pay-464a4.appspot.com/o/a7.jpg?alt=media&token=a19902b9-4d45-45f5-a774-d0af617dfd2e")
-            .into(ProfileImage)
-//        Toast.makeText(applicationContext,intent.getStringExtra("username"),Toast.LENGTH_SHORT).show()
-        databaseReferenc=FirebaseDatabase.getInstance()
-            .getReference("Peoples/${intent.getStringExtra("username")}")
 
+        databaseReferenc=FirebaseDatabase.getInstance()
+            .getReference("main_database/Peoples").child("${intent.getStringExtra("username")}")
+
+       lateinit var usernamee:String
+       lateinit var imageStr:String
         databaseReferenc.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
 
 //                var imageStr: String = snapshot.child("naam1").getValue().toString()
 //                userName.text = imageStr
-//                if(snapshot.exists()){
-//                    var usernamee:String = intent.getStringExtra("username")
-//                    userName.text = usernamee
-//                    var imageStr: String = snapshot.child("Image").getValue().toString()
-//                    Glide.with(ProfileImage).load(imageStr).into(ProfileImage)
-//
-//                    val sdf = SimpleDateFormat("dd:MM:yyyy_hh:mm:ss")
-//                    val currentDate = sdf.format(Date())
-//
-//                    floatingButton.setOnClickListener {
-//                        databaseTracsact  = FirebaseDatabase.getInstance().getReference("Transaction")
-//                           databaseTracsact.child("$currentDate")
-//                            .child("username").setValue("$usernamee")
-//                        databaseTracsact.child("$currentDate")
-//                            .child("currentdate").setValue("$currentDate")
-//                        databaseTracsact.child("$currentDate")
-//                            .child("amount").setValue("${etRupees.text.toString()}")
-//                    }
-//                }
+                if(snapshot.exists()){
+                    usernamee = snapshot.child("naam1").value.toString()
+                    userName.text = usernamee
+                    imageStr = snapshot.child("Image").value.toString()
+                    Glide.with(ProfileImage).load(imageStr).into(ProfileImage)
+
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -60,5 +58,24 @@ class PayActivity : AppCompatActivity() {
             }
 
         })
+
+        val sdf = SimpleDateFormat("dd:M:yyyy_hh:mm:ss")
+        val currentDate = sdf.format(Date())
+
+        val dsd =SimpleDateFormat("dd-M-yyyy, hh:mm a")
+        val dates = dsd.format(Date())
+        floatingButtonn.setOnClickListener {
+            databaseTracsact = FirebaseDatabase.getInstance().getReference("Transactions").child("$currentDate")
+            databaseTracsact.child("username").setValue("$usernamee")
+            databaseTracsact.child("currentdate").setValue("$dates")
+            databaseTracsact.child("amount").setValue("- Rs.${etRupees.text.toString()}")
+            databaseTracsact.child("Image").setValue("$imageStr")
+            Toast.makeText(applicationContext,"added to transaction",Toast.LENGTH_SHORT).show()
+
+            databaseTracsactchat = FirebaseDatabase.getInstance().getReference("chat/$usernamee")
+            databaseTracsactchat.child("$currentDate")
+                .child("chat")
+                .setValue("${etRupees.text.toString()} Rs. pay to $usernamee")
+        }
     }
 }
