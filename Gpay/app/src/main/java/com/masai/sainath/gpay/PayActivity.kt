@@ -31,8 +31,6 @@ class PayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
 
-
-
         databaseReferenc=FirebaseDatabase.getInstance()
             .getReference("main_database/Peoples").child("${intent.getStringExtra("username")}")
 
